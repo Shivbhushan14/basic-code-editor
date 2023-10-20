@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+
+</head>
+<title>code Editor</title>
+<style>
+    #editor{
+        width: 80%;
+        height: 400px;
+        border: 1px; solid #ccc;
+        font-family: monospace;
+    }
+</style>
+<body>
+    <div id="editor" contenteditable="true"></div>
+    <button id="copy-button">copy</button>
+    <button id="save-button">save</button>
+    <button id="lock-button">lock/Unlock</button>
+    <script>
+        const editor = document.getElementById('editor');
+        const copyButton = document.getElementById('save-button');
+        const saveButton = document.getElementById('save-button');
+        const lockButton = document.getElementById('lock-button');
+        let islocked = false;
+
+        copyButton.addEventListener('click', () => {
+            const textTocopy = editor.innerText;
+            navigator.clipboard.writeText(textcopy);
+        });
+
+        saveButton.addEventListener('click', () => {
+            const textTocopy = editor.innerText;
+            console.log('saved content:',textTosave);
+
+            copyButton.addEventListener('click', () => {
+            isLocked = !isLocked;
+            editor.contentEditable = !isLocked;
+            lockbutton.innerText = isLocked ? 'Unlock' : 'Lock';
+        });
+
+
+
+        });
+
+    </script>
+
+    
+</body>
+</html>
